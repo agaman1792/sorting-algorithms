@@ -6,7 +6,7 @@ How to use this command line tool
 1. Pull the repository:  `git clone git@github.com:schwaggyg/sorting-algorithms.git`
 2. Install global dependencies
     * ts-node: enables running typescript code in node js: `npm install -g ts-node`
-3. Install dependencies: `npm install`
+3. Install local dependencies: `npm install`
 4. Run the program in the language you prefer:
     * JavaScript: `npm run js -- {options}` (e.g: `npm run js -- -a --size 10000 --min -100 --max 100000`)
     * TypeScript: `npm run ts -- {options}` (e.g: `npm run ts -- -a --size 10000 --min -100 --max 100000`)
