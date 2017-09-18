@@ -1,0 +1,6 @@
+# Build Directory
+build
+
+# Node.js common
+node_modules
+package-lock.json
