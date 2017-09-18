@@ -4,3 +4,22 @@ build
 # Node.js common
 node_modules
 package-lock.json
+
+# Visual Studio stuff
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.vs
+
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
