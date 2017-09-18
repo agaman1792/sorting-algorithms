@@ -1,4 +1,3 @@
-"use strict";
 const stats = {
     comparisons: 0,
     swaps: 0,
