@@ -24,5 +24,25 @@ namespace SortingAlgorithms
 
             return calibration;
         }
+
+        public static void PrintAlgorithmResult(AlgorithmResult result)
+        {
+            Console.WriteLine($"Comparisons : {result.Stats.Comparisons}");
+            Console.WriteLine($"Swaps       : {result.Stats.Swaps}");
+            Console.WriteLine($"Exec time   : {result.Stats.Time} ms");
+        }
+    }
+
+    class AlgorithmStats
+    {
+        public int Comparisons { get; set; } = 0;
+        public int Swaps { get; set; } = 0;
+        public int Time { get; set; } = 0;
+    }
+
+    class AlgorithmResult
+    {
+        public AlgorithmStats Stats;
+        public IEnumerable<int> Result;
     }
 }

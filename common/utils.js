@@ -43,8 +43,8 @@ function PrintSortingResult(res) {
         return;
     if (!res.stats)
         return;
-    console.log("Comparisons: " + res.stats.comparisons);
-    console.log("Swaps: " + res.stats.swaps);
-    console.log("Time: " + res.stats.time);
+    console.log(`Comparisons : ${res.stats.comparisons}`);
+    console.log(`Swaps       : ${res.stats.swaps}`);
+    console.log(`Exec time   : ${res.stats.time}`);
 }
 exports.PrintSortingResult = PrintSortingResult;

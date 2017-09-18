@@ -1,7 +1,7 @@
 const stats = {
-    comparisons: 0,
-    swaps: 0,
-    time: 0
+  comparisons: 0,
+  swaps: 0,
+  time: 0
 };
 
 function bubbleSort(input) {

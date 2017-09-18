@@ -1281,7 +1281,7 @@
     <None Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="bubble-sort\BubbleSort.cs" />
+    <Compile Include="bubble-sort\Index.cs" />
     <Compile Include="common\Utils.cs" />
     <Compile Include="Index.cs" />
   </ItemGroup>
