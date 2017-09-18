@@ -1,16 +1,14 @@
 {
   "name": "sorting-algo",
   "version": "0.0.1",
-  "description": "",
+  "description": "Implementations of popular sorting algorithms",
   "main": "index.js",
   "scripts": {
-    "js:run": "node index.js",
-
-    "ts:compile": "tsc --outDir ./build/ts ./index.ts",
-    "ts:run": "node build/ts/index.js"
+    "js": "node index.js",
+    "ts": "ts-node build/ts/index.js"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^2.1.0",
     "clui": "^0.3.6",

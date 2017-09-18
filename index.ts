@@ -3,6 +3,7 @@ declare var require: any;
 
 import BubbleSort from "./bubble-sort";
 import InsertionSort from "./insertion-sort";
+import MergeSort from "./merge-sort";
 import SelectionSort from "./selection-sort";
 
 import {
@@ -96,21 +97,21 @@ if (program.all || program.insertion) {
   console.log();
 }
 
-// if (program.all || program.merge) {
-//   process.stdout.write(`Running the merge sort algorithm... `);
-//   results.merge = algorithms.sorting.merge(arr);
-//   process.stdout.write(chalk.green(`OK\n`));
+if (program.all || program.merge) {
+  process.stdout.write(`Running the merge sort algorithm... `);
+  results.merge = MergeSort(arr);
+  process.stdout.write(chalk.green(`OK\n`));
 
-//   process.stdout.write(`Validating merge sort result... `);
-//   if (calibration.equals(results.merge.result)) {
-//     process.stdout.write(chalk.green(`OK\n`));
-//     utils.printSortingResult(results.merge);
-//   } else {
-//     process.stdout.write(`Validation failed!\n`);
-//   }
+  process.stdout.write(`Validating merge sort result... `);
+  if (ArrEqual(calibration, results.merge.result)) {
+    process.stdout.write(chalk.green(`OK\n`));
+    PrintSortingResult(results.merge);
+  } else {
+    process.stdout.write(`Validation failed!\n`);
+  }
 
-//   console.log();
-// }
+  console.log();
+}
 
 if (program.all || program.selection) {
   process.stdout.write(`Running the selection sort algorithm... `);

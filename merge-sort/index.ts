@@ -1,10 +1,12 @@
-const stats = {
+import {AlgorithmStats, AlgorithmResult} from '../common/utils';
+
+const stats: AlgorithmStats = {
   comparisons: 0,
   swaps: 0,
   time: 0
 };
 
-function merge(left, right) {
+function merge(left: Array<any>, right: Array<any>){
   const result = [];
   const lLen = left.length;
   const rLen = right.length;
@@ -22,14 +24,15 @@ function merge(left, right) {
       result.push(right[r++]);
     }
   }  
-  //remaining part needs to be addred to the result
+
   return result.concat(left.slice(l)).concat(right.slice(r));
 }
 
-function mergeSort(arr){
+function mergeSort(arr: Array<any>): Array<any> {
   const len = arr.length;
+
   if (len < 2)
-     return arr;
+    return arr;
 
   const mid = Math.floor(len / 2);
   const left = arr.slice(0, mid);
@@ -39,7 +42,7 @@ function mergeSort(arr){
   return merge(mergeSort(left),mergeSort(right));
 }
 
-module.exports = (input) => {
+export default (input: Array<any>): AlgorithmResult => {
   const start = new Date().getTime();
   const result = mergeSort(input);
   stats.time = new Date().getTime() - start;
