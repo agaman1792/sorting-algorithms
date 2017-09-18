@@ -7,22 +7,22 @@ const stats = {
 function insertionSort(input) {
   const result = [].concat(input); // New `workable` array construction
   const len = result.length;
-  let i, el, j, toInsert;
+  let i, j, el;
   
   const start = new Date().getTime(); // Start the algorithm execution timer
 
   // Insertion sort algorithm implementation
   for(i = 1; i < len; i++) {
     el = result[i];
-    j = i - 1;
+    j = i;
 
-    while(j >= 0 && result[j] > el) {
+    while(j > 0 && result[j - 1] > el) {
       stats.comparisons += 1;
-      result[j+1] = result[j];
+      result[j] = result[j-1];
       j--;
     }
 
-    result[j+1] = el;
+    result[j] = el;
   }
   // Done insertion sorting
 

@@ -4,7 +4,25 @@ const stats = {
   time: 0
 };
 
+
+// Pure BubbleSort algorithm implementation
 function bubbleSort(input) {
+  const len = input.length;
+  let i, j, temp;
+
+  for (i = len - 1; i >= 0; i--) {
+    for (j = 1; j <= i; j++) {
+      if (result[j - 1] > result[j]) {
+        temp = result[j - 1];
+        result[j - 1] = result[j];
+        result[j] = temp;
+      }
+    }
+  }
+}
+
+// Stats-enhanced BubbleSort algorithm implementation
+function bubbleSortWithStats(input) {
   const result = [].concat(input);
   const len = result.length;
   let i, j, temp;
@@ -28,7 +46,8 @@ function bubbleSort(input) {
   stats.time = new Date().getTime() - start;
   return result;
 }
+
 module.exports = (input) => ({
-  result: bubbleSort(input),
+  result: bubbleSortWithStats(input),
   stats
 });

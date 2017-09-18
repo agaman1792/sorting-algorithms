@@ -1281,9 +1281,12 @@
     <None Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="bubble-sort\Index.cs" />
+    <Compile Include="bubble-sort\BubbleSort.cs" />
     <Compile Include="common\Utils.cs" />
     <Compile Include="Index.cs" />
+    <Compile Include="insertion-sort\InsertionSort.cs" />
+    <Compile Include="merge-sort\MergeSort.cs" />
+    <Compile Include="selection-sort\SelectionSort.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".git\branches\" />

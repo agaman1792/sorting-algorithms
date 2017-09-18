@@ -27,6 +27,13 @@ namespace SortingAlgorithms
 
         public static void PrintAlgorithmResult(AlgorithmResult result)
         {
+
+            //Console.WriteLine();
+            //foreach (var val in result.Result)
+            //{
+            //    Console.Write($"{val} ");
+            //}
+            Console.WriteLine();
             Console.WriteLine($"Comparisons : {result.Stats.Comparisons}");
             Console.WriteLine($"Swaps       : {result.Stats.Swaps}");
             Console.WriteLine($"Exec time   : {result.Stats.Time} ms");
@@ -44,5 +51,13 @@ namespace SortingAlgorithms
     {
         public AlgorithmStats Stats;
         public IEnumerable<int> Result;
+    }
+
+    class SortingAlgorithmResults
+    {
+        public AlgorithmResult Bubble;
+        public AlgorithmResult Insertion;
+        public AlgorithmResult Merge;
+        public AlgorithmResult Selection;
     }
 }

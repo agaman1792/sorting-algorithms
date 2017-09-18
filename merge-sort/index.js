@@ -12,17 +12,15 @@ function merge(left, right) {
   let r = 0;
     
   while(l < lLen && r < rLen) {
-    stats.comparisons += 1;
     if(left[l] < right[r]) {
       stats.comparisons += 1;
       result.push(left[l++]);
     }
     else {
-      stats.comparisons += 1;
       result.push(right[r++]);
     }
   }  
-  //remaining part needs to be addred to the result
+  // The remaining part needs to be addred to the result
   return result.concat(left.slice(l)).concat(right.slice(r));
 }
 
@@ -35,7 +33,7 @@ function mergeSort(arr){
   const left = arr.slice(0, mid);
   const right = arr.slice(mid);
   
-  // Send left and right to the mergeSort to broke it down into pieces then merge those
+  // Send left and right to the mergeSort to brake it down into pieces then merge those
   return merge(mergeSort(left),mergeSort(right));
 }
 

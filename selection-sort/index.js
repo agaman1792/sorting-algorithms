@@ -8,7 +8,7 @@ function selectionSort(input) {
   const result = [].concat(input); // Grab a copy of the input array
   const len = result.length;
   let i, j;
-  let minIdx, temp;
+  let minIdx, tmp;
 
   const start = new Date().getTime(); // Start the algorithm execution timer
   
@@ -23,9 +23,9 @@ function selectionSort(input) {
 
     if (i !== minIdx) { // If we have found a valid element, perform the swap
       stats.swaps += 1;
-      temp = result[i];
+      tmp = result[i];
       result[i] = result[minIdx];
-      result[minIdx] = temp;
+      result[minIdx] = tmp;
     }
   }
   // Done selection sorting

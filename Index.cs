@@ -15,9 +15,18 @@ namespace SortingAlgorithms
             int[] arr = Utils.RandArray(size).ToArray(); // Generate the test array
             int[] calibration = Utils.CalibrationArray(arr).ToArray(); // Generate the "calibration" array
 
+            var results = new SortingAlgorithmResults
+            {
+                Bubble = BubbleSort.Sort(arr),
+                Insertion = InsertionSort.Sort(arr),
+                Merge = MergeSort.Sort(arr),
+                Selection = SelectionSort.Sort(arr)
+            };
 
-            var bsr = BubbleSort.Sort(arr);
-            Utils.PrintAlgorithmResult(bsr);
+            Utils.PrintAlgorithmResult(results.Bubble);
+            Utils.PrintAlgorithmResult(results.Insertion);
+            Utils.PrintAlgorithmResult(results.Merge);
+            Utils.PrintAlgorithmResult(results.Selection);
 
             Console.ReadKey();
         }

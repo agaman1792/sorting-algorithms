@@ -44,6 +44,13 @@ if (!program.all
     program.help();
 }
 
+if (program.size)
+  configuration.arrayLength = program.size;
+if (program.min)
+  configuration.minValue = program.min;
+if (program.max)
+  configuration.maxValue = program.max;
+
 // Generate the test array. Print the used configuration
 console.log();
 console.log("Sorting using the following configuration");

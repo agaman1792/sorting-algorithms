@@ -14,13 +14,11 @@ function merge(left: Array<any>, right: Array<any>){
   let r = 0;
     
   while(l < lLen && r < rLen) {
-    stats.comparisons += 1;
     if(left[l] < right[r]) {
       stats.comparisons += 1;
       result.push(left[l++]);
     }
     else {
-      stats.comparisons += 1;
       result.push(right[r++]);
     }
   }  
@@ -38,7 +36,7 @@ function mergeSort(arr: Array<any>): Array<any> {
   const left = arr.slice(0, mid);
   const right = arr.slice(mid);
   
-  // Send left and right to the mergeSort to broke it down into pieces then merge those
+  // Send left and right to the mergeSort to brake it down into pieces then merge those
   return merge(mergeSort(left),mergeSort(right));
 }
 

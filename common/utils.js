@@ -24,27 +24,30 @@ function ArrEqual(a, b) {
 exports.ArrEqual = ArrEqual;
 
 function Rand(min = ARR_MIN_VALUE, max = ARR_MAX_VALUE) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 exports.Rand = Rand;
 
 function MapToRand(min = ARR_MIN_VALUE, max = ARR_MAX_VALUE) {
-    return function (val, idx) { return Rand(min, max); };
+  return function (val, idx) { return Rand(min, max); };
 }
 exports.MapToRand = MapToRand;
 
 function RandArray(length = ARR_LEN_VALUE, min = ARR_MIN_VALUE, max = ARR_MAX_VALUE) {
-    return Array.apply(null, Array(length)).map(MapToRand(min, max));
+  return Array.apply(null, Array(length)).map(MapToRand(min, max));
 }
 exports.RandArray = RandArray;
 
 function PrintSortingResult(res) {
-    if (!res)
-        return;
-    if (!res.stats)
-        return;
-    console.log(`Comparisons : ${res.stats.comparisons}`);
-    console.log(`Swaps       : ${res.stats.swaps}`);
-    console.log(`Exec time   : ${res.stats.time}`);
+  if (!res)
+    return;
+  if (!res.stats)
+    return;
+
+  console.log(res.result.join(`,`));
+
+  console.log(`Comparisons : ${res.stats.comparisons}`);
+  console.log(`Swaps       : ${res.stats.swaps}`);
+  console.log(`Exec time   : ${res.stats.time}`);
 }
 exports.PrintSortingResult = PrintSortingResult;
