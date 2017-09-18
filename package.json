@@ -1,7 +1,7 @@
 {
   "name": "sorting-algo",
-  "version": "0.0.1",
-  "description": "Implementations of popular sorting algorithms",
+  "version": "0.3.1",
+  "description": "Implementations of popular sorting algorithms in different programming languages",
   "main": "index.js",
   "scripts": {
     "js": "node index.js",

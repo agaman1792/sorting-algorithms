@@ -12,8 +12,8 @@ function merge(left, right) {
   let r = 0;
     
   while(l < lLen && r < rLen) {
+    stats.comparisons += 1;
     if(left[l] < right[r]) {
-      stats.comparisons += 1;
       result.push(left[l++]);
     }
     else {
