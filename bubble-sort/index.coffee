@@ -3,32 +3,36 @@ stats =
   swaps: 0
   time: 0
 
+swap = (arr, first, second) ->
+  stats.swaps += 1
+  temp = arr[first]
+  arr[first] = arr[second]
+  arr[second] = temp
+  arr
+
+cmp = (a, b) -> 
+  stats.comparisons += 1
+  a > b ? 1 : a == b : 0 ? -1
+
 # Stats-enhanced BubbleSort algorithm implementation
 bubbleSort = (input) ->
   result = [].concat(input);
   len = result.length;
-  i, j, temp;
+  i = 0
 
   start = new Date().getTime();
 
   # Bubble sort algorithm implementation
-  for (i = len - 1; i >= 0; i--) {
-    for (j = 1; j <= i; j++) {
-      stats.comparisons += 1;
-      if (result[j - 1] > result[j]) {
-        stats.swaps += 1;
-        temp = result[j - 1];
-        result[j - 1] = result[j];
-        result[j] = temp;
-      }
-    }
-  }
+  while i < len
+    l = i
+    swap result, l, l+1 while l-- and cmp(result[l], result[l+1]) > 0
+    i++
   # Done bubble sorting
 
   stats.time = new Date().getTime() - start;
-  return result;
+  result
 
 module.exports = (input) -> ({
-  result: bubbleSortWithStats(input),
+  result: bubbleSort(input),
   stats
 });

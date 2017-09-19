@@ -1,7 +1,11 @@
+chalk = require "chalk"
+clui  = require "clui"
+program = require "commander"
 
-chalk = require("chalk")
-clui  = require("clui")
-program = require("commander")
+algorithms =
+  bubble: require "./bubble-sort/index.coffee"
+
+utils = require "./common/utils"
 
 configuration =
   arrayLength: 10
@@ -47,7 +51,8 @@ console.log "Maximum Value: " + configuration.maxValue
 console.log()
 arr = utils.RandArray(configuration.arrayLength, configuration.minValue, configuration.maxValue)
 calibration = [].concat(arr).sort((a, b) -> (a > b ? 1 : a == b ? 0 : -1))
-console.log(calibration);
+# console.log(calibration);
+
 results = {};
 if program.all or program.bubble
   process.stdout.write "Running the bubble sort algorithm... "
