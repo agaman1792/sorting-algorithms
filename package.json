@@ -1,11 +1,12 @@
 {
   "name": "sorting-algo",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Implementations of popular sorting algorithms in different programming languages",
   "main": "index.js",
   "scripts": {
-    "js": "node index.js",
-    "ts": "ts-node build/ts/index.js"
+    "coffee": "coffee ./index.coffee",
+    "js": "node ./index.js",
+    "ts": "ts-node ./index.ts"
   },
   "author": "",
   "license": "MIT",

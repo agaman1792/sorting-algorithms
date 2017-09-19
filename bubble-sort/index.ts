@@ -31,7 +31,7 @@ function bubbleSort(input: Array<any>): Array<any> {
   return result;
 }
 
-export default (target: Array<any>): AlgorithmResult => ({
+export (target: Array<any>): AlgorithmResult => ({
   result: bubbleSort(target),
   stats
 });

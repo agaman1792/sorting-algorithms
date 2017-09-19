@@ -1,7 +1,7 @@
 declare var process: any;
 declare var require: any;
 
-import BubbleSort from "./bubble-sort";
+import BubbleSort from "./bubble-sort/index";
 import InsertionSort from "./insertion-sort";
 import MergeSort from "./merge-sort";
 import SelectionSort from "./selection-sort";
